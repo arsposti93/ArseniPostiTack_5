@@ -2,18 +2,19 @@ package com.company;
 
 import java.time.LocalDate;
 
-public class Trucks extends Car  {
+public class Trucks extends Car {
 
   private int numberOfWheels;
   private int maxLoadingCapacity;
   private boolean trailer;
 
-  Trucks (EnumCars enumCars) {
+  Trucks(EnumCars enumCars) {
     super(enumCars);
   }
 
   public Trucks(String name, String color, boolean status, int id,
-      EnumCars enumCars, LocalDate localDate, int maxLoadingCapacity, int numberOfWheels, boolean trailer ) {
+      EnumCars enumCars, LocalDate localDate, int maxLoadingCapacity, int numberOfWheels,
+      boolean trailer) {
     super(name, color, status, id, enumCars, localDate);
     this.maxLoadingCapacity = maxLoadingCapacity;
     this.numberOfWheels = numberOfWheels;
@@ -36,7 +37,7 @@ public class Trucks extends Car  {
         + "количество колес: " + numberOfWheels + ", " + checkTrailer();
   }
 
-  public String checkTrailer () {
+  public String checkTrailer() {
     if (trailer) {
       return " Имеется возможность добавить прицеп ";
     } else {
@@ -44,9 +45,32 @@ public class Trucks extends Car  {
     }
   }
 
-  public void move (String string ) {
-   string = "Переопределение метода";
+  public void move(String string) {
+    string = "Переопределение метода";
     System.out.println(string);
   }
 
+  public int getNumberOfWheels() {
+    return numberOfWheels;
+  }
+
+  public void setNumberOfWheels(int numberOfWheels) {
+    this.numberOfWheels = numberOfWheels;
+  }
+
+  public int getMaxLoadingCapacity() {
+    return maxLoadingCapacity;
+  }
+
+  public void setMaxLoadingCapacity(int maxLoadingCapacity) {
+    this.maxLoadingCapacity = maxLoadingCapacity;
+  }
+
+  public boolean isTrailer() {
+    return trailer;
+  }
+
+  public void setTrailer(boolean trailer) {
+    this.trailer = trailer;
+  }
 }

@@ -12,13 +12,15 @@ public abstract class Car implements Movable {
   private int id;
   private LocalDate localDate;
 
-  Car() {}
+  Car() {
+  }
 
   Car(EnumCars enumCars) {
     this.enumCars = enumCars;
   }
+
   public Car(String name, String color, boolean status, int id, EnumCars enumCars,
-      LocalDate localDate ) {
+      LocalDate localDate) {
     this.name = name;
     this.color = color;
     this.status = status;
@@ -38,10 +40,10 @@ public abstract class Car implements Movable {
   public String toString() {
     String s1 = "Название машины: " + name + ", " + "цвет: " + color + ", " +
         "cостояние: движется" + ", " + "identification number: " + id + ", " +
-        enumCars.getInfo() +", год выпуска: "+ getLocalDate();
+        enumCars.getInfo() + ", год выпуска: " + getLocalDate();
     String s2 = "Название машины: " + name + ", " + "цвет: " + color + ", " +
         "cостояние: в покое" + ", " + "identification number: " + id + ", " +
-        enumCars.getInfo() +", год выпуска: "+ getLocalDate();
+        enumCars.getInfo() + ", год выпуска: " + getLocalDate();
     if (status) {
       return s1;
     } else {
@@ -58,7 +60,7 @@ public abstract class Car implements Movable {
     return localDate.format(dateTimeFormatter);
   }
 
-  public void setLocalDate (LocalDate localDate) {
+  public void setLocalDate(LocalDate localDate) {
     this.localDate = localDate;
   }
 
