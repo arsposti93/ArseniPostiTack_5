@@ -3,65 +3,78 @@ package com.company;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public abstract class Car implements Movable  {
+public abstract class Car implements Movable {
 
+  public EnumCars enumCars;
   private String name;
   private String color;
   private boolean status;
-  public EnumCars enumCars;
   private int id;
-  private String s1;
-  private String s2;
+  private LocalDate localDate;
 
+  Car() {}
 
-Car (EnumCars enumCars) {
-  this.enumCars =enumCars;
-}
-
-  Car () {}
-
-
-  public Car (String name,  String color, boolean status, int id, EnumCars enumCars    ) {
+  Car(EnumCars enumCars) {
+    this.enumCars = enumCars;
+  }
+  public Car(String name, String color, boolean status, int id, EnumCars enumCars,
+      LocalDate localDate ) {
     this.name = name;
     this.color = color;
     this.status = status;
     this.id = id;
     this.enumCars = enumCars;
+    this.localDate = localDate;
   }
-
-
 
   public abstract void move();
 
   public abstract void stop();
 
-  public String toString() {
-    s1 = "Название машины: " + name + ", " + "цвет: " + color + ", " +
-        "cостояние: движется" + ", " + "identification number: " + id + ", " + enumCars.getInfo()+ ".";
-    s2 = "Название машины: " + name + ", " + "цвет: " + color + ", " +
-        "cостояние: в покое" + ", " + "identification number: " + id + ", " + enumCars.getInfo()+ ".";
-    if (status) {
-      System.out.println(s1);
-      return s1;
-    } else {
-      System.out.println(s2);
-      return s2;
-    }
-      }
-
-  public String getS1() {
-    return s1;
+  public void checkReady() {
+    System.out.println("I am ready");
   }
 
-  public String getS2() {
-    return s2;
+  public String toString() {
+    String s1 = "Название машины: " + name + ", " + "цвет: " + color + ", " +
+        "cостояние: движется" + ", " + "identification number: " + id + ", " +
+        enumCars.getInfo() +", год выпуска: "+ getLocalDate();
+    String s2 = "Название машины: " + name + ", " + "цвет: " + color + ", " +
+        "cостояние: в покое" + ", " + "identification number: " + id + ", " +
+        enumCars.getInfo() +", год выпуска: "+ getLocalDate();
+    if (status) {
+      return s1;
+    } else {
+      return s2;
+    }
+  }
+
+  public void foo(Car car) {
+    car.checkReady();
+  }
+
+  public String getLocalDate() {
+    DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy");
+    return localDate.format(dateTimeFormatter);
+  }
+
+  public void setLocalDate (LocalDate localDate) {
+    this.localDate = localDate;
+  }
+
+  public EnumCars getEnumCars() {
+    return enumCars;
+  }
+
+  public void setEnumCars(EnumCars enumCars) {
+    this.enumCars = enumCars;
   }
 
   public String getName() {
     return name;
   }
 
-  public void setName (String name) {
+  public void setName(String name) {
     this.name = name;
   }
 
@@ -81,14 +94,6 @@ Car (EnumCars enumCars) {
     this.status = status;
   }
 
-  public EnumCars getEnumCars() {
-    return enumCars;
-  }
-
-  public void setEnumCars(EnumCars enumCars) {
-    this.enumCars = enumCars;
-  }
-
   public int getId() {
     return id;
   }
@@ -96,16 +101,9 @@ Car (EnumCars enumCars) {
   public void setId(int id) {
     this.id = id;
   }
-
-public void checkche () {
-  System.out.println("I am ready");
 }
 
-  public void foo (Car car) {
-    car.checkche();}
 
-
-}
 
 
 

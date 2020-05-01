@@ -6,21 +6,17 @@ public class SmallCars extends Car {
 
   private String type;
 
-
 SmallCars () {}
 
 SmallCars (EnumCars enumCars) {
   super(enumCars);
 }
 
-  public SmallCars(String name, String color, boolean status, int id, EnumCars enumCars,
-      String type) {
-    super(name, color, status, id, enumCars);
+  public SmallCars (String name, String color, boolean status, int id, EnumCars enumCars,
+      LocalDate localDate, String type) {
+    super(name, color, status, id, enumCars, localDate);
     this.type = type;
   }
-
-
-
 
   @Override
   public void move() {
@@ -29,19 +25,8 @@ SmallCars (EnumCars enumCars) {
 
   @Override
   public String toString() {
-    String s1 = "Название машины: " + getName() + ", " + "цвет: " + getColor() + ", " +
-        "cостояние: движется" + ", " + "identification number: " + getId() + ", " + enumCars
-        .getInfo() + ", " + type + ".";
-    String s2 = "Название машины: " + getName() + ", " + "цвет: " + getColor() + ", " +
-        "cостояние: в покое" + ", " + "identification number: " + getId() + ", " + enumCars
-        .getInfo() + ", " + type + ".";
-    if (isStatus()) {
-      System.out.println(s1);
-      return s1;
-    } else {
-      System.out.println(s2);
-      return s2;
-    }
+  return super.toString()+", "+type+".";
+
   }
 
   @Override
@@ -62,9 +47,7 @@ public int checkDoors (int numberOfDoors) {
   }
   return numberOfDoors;
 }
-
-
-    }
+}
 
 
 

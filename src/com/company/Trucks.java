@@ -1,6 +1,5 @@
 package com.company;
 
-
 import java.time.LocalDate;
 
 public class Trucks extends Car  {
@@ -14,12 +13,11 @@ public class Trucks extends Car  {
   }
 
   public Trucks(String name, String color, boolean status, int id,
-      EnumCars enumCars, int maxLoadingCapacity, int numberOfWheels, boolean trailer ) {
-    super(name, color, status, id, enumCars);
+      EnumCars enumCars, LocalDate localDate, int maxLoadingCapacity, int numberOfWheels, boolean trailer ) {
+    super(name, color, status, id, enumCars, localDate);
     this.maxLoadingCapacity = maxLoadingCapacity;
     this.numberOfWheels = numberOfWheels;
     this.trailer = trailer;
-
   }
 
   @Override
@@ -34,24 +32,11 @@ public class Trucks extends Car  {
 
   @Override
   public String toString() {
-    String s1 = "Название машины: " + getName() + ", " + "цвет: " + getColor() + ", " +
-        "cостояние: движется" + ", " + "identification number: " + getId() + ", " + enumCars
-        .getInfo() + ", " + "Максимальная грузоподъёмность: " + maxLoadingCapacity + ", "
-        + "Число колес: " + numberOfWheels + checkTrailer() + ".";
-    String s2 = "Название машины: " + getName() + ", " + "цвет: " + getColor() + ", " +
-        "cостояние: в покое" + ", " + "identification number: " + getId() + ", " + enumCars
-        .getInfo() + ", " + "Максимальная грузоподъёмность: " + maxLoadingCapacity + ", "
-        + "Число колес: " + numberOfWheels + checkTrailer() +".";
-    if (isStatus()) {
-      System.out.println(s1);
-      return s1;
-    } else {
-      System.out.println(s2);
-      return s2;
-    }
+    return super.toString() + ", грузоподъёмность " + maxLoadingCapacity + " тонн, "
+        + "количество колес: " + numberOfWheels + ", " + checkTrailer();
   }
 
-  public String checkTrailer() {
+  public String checkTrailer () {
     if (trailer) {
       return " Имеется возможность добавить прицеп ";
     } else {

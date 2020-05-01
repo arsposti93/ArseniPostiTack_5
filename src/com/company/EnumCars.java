@@ -12,7 +12,6 @@ public enum EnumCars {
   PEUGEOT("Peugeot", "France");
 
   private String nameOfCorporation;
-
   private String countryOfOrigin;
 
   EnumCars (String nameOfCorporation, String countryOfOrigin) {
