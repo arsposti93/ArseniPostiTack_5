@@ -1,4 +1,6 @@
-package com.company;
+package com.Bike;
+
+import com.company.Movable;
 
 public class Bike implements Movable {
 

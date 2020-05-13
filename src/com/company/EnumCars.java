@@ -24,7 +24,7 @@ public enum EnumCars {
         "Name of corporation- " + getNameOfCorporation();
   }
 
-  public String getNameOfCorporation() {
+    public String getNameOfCorporation() {
     return nameOfCorporation;
   }
 

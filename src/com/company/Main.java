@@ -1,55 +1,50 @@
 package com.company;
 
+import com.Bike.Bike;
+import com.Car.Car;
+import com.Car.SmallCars;
+import com.Car.Trucks;
+import com.Horse.Horse;
+
+import com.Store.Store;
+
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Main {
 
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    SmallCars car1 = new SmallCars();
-    SmallCars car2 = new SmallCars(EnumCars.TOYOTA);
-    SmallCars car3 = new SmallCars("BMW", "black",
-        true, 3, EnumCars.BMW, LocalDate.ofYearDay(1999, 1), "sedan");
-    System.out.println(car3.toString());
+        List<Car> list = new ArrayList<>();
 
-    Trucks car6 = new Trucks("Renault", "green",
-        true, 5, EnumCars.RENAULT, LocalDate.now(), 20,
-        18, true);
-    System.out.println(car6.toString());
+        SmallCars car1 = new SmallCars(1, "Mersedes", 9000);
+        SmallCars car2 = new SmallCars(2, "Mersedes-Benz", 8300);
+        SmallCars car3 = new SmallCars(3, "Mazda", 9399);
+        SmallCars car4 = new SmallCars(4, "Mini-coper", 1735);
+        SmallCars car5 = new SmallCars(5, "Lada", 100);
+        list.add(car1);
+        list.add(car2);
+        list.add(car3);
+        list.add(car4);
+        list.add(car5);
 
-    Car car4 = new SmallCars("LADA", "Yellow",
-        false, 4, EnumCars.LADA, LocalDate.ofYearDay(2003, 3),
-        "hatchback");
+        Store<Car> store1 = new Store<>(15000, list);
 
-    Movable car5 = new Trucks("Mersedes", "green",
-        true, 5, EnumCars.MERSEDES, LocalDate.ofYearDay(2007, 2), 20,
-        18, true);
+        store1.printList(list);
+        store1.sell(16000, new SmallCars(6, "Audi", 16100));
+        System.out.println("-----------------------------------");
+        store1.printList(list);
+        store1.purchase(500, 4);
+        System.out.println("-----------------------------------");
+        store1.printList(list);
 
-    Trucks car7 = new Trucks("Mazda", "green",
-        true, 5, EnumCars.MAZDA, LocalDate.ofYearDay(2007, 2),
-        20, 18, true);
 
-    Trucks car8 = new Trucks(EnumCars.VAZ);
+        SmallCars car8 = new SmallCars("BMW", "black", true, 6,
+                EnumCars.BMW, LocalDate.ofYearDay(1999, 1), "sedan");
+        System.out.println(car8.toString());
 
-    Car car9 = new Trucks("Peugeot", "green",
-        true, 5, EnumCars.PEUGEOT, LocalDate.ofYearDay(2021, 3),
-        15, 10, false);
 
-    Bike bike = new Bike("BMX", 12, 2);
-    System.out.println(bike.toString());
-
-    Horse horse = new Horse("Matilda", 14);
-    System.out.println(horse.toString());
-
-    car1.move();
-    car2.stop();
-
-    car5.stop();
-    car7.move("STOP");
-    car3.checkDoors(3);
-
-    car8.foo(car7);
-    car9.foo(car8);
-
-  }
+    }
 }

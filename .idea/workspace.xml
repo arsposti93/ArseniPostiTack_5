@@ -3,11 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="2fbf9943-43c5-48e7-a6e5-973ab8c7c5a0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/EnumCars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/EnumCars.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tack_5/com/company/Bike.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tack_5/com/company/Car.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tack_5/com/company/EnumCars.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tack_5/com/company/EnumCars.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tack_5/com/company/Horse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tack_5/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tack_5/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tack_5/com/company/Movable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tack_5/com/company/Movable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tack_5/com/company/SmallCars.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tack_5/com/company/Trucks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Bike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Bike/Bike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Horse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Horse/Horse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Movable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Movable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/SmallCars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SmallCars.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Trucks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Trucks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/SmallCars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Car/SmallCars.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Trucks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Car/Trucks.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +29,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -31,7 +41,8 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DZ" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
